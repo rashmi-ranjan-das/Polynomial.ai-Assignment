@@ -18,6 +18,9 @@ from django.urls import path
 from rest_framework import routers
 from urlapp import views
 from django.urls.conf import include
+from django.views.static import serve
+from django.conf.urls import url
+from django.conf import settings
 
 router_text = routers.DefaultRouter()
 router_ip = routers.DefaultRouter()
@@ -28,4 +31,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router_text.urls)),
     path('api/', include(router_ip.urls)),
+
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
