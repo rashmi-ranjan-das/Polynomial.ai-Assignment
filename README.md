@@ -49,3 +49,7 @@ python manage.py runserver
 ![Alt text](./img2.png?raw=true "Title")
 ![Alt text](./img3.png?raw=true "Title")
 ![Alt text](./img5.png?raw=true "Title")
+
+
+https://user-images.githubusercontent.com/62706300/154519994-e2918b5f-6844-43c0-be08-1dc8f59add18.mp4
+
