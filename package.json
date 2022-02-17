@@ -1,5 +1,6 @@
 {
   "name": "textshareproject",
+  "homepage": "https://polynomial-frontend.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

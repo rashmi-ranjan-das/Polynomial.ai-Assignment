@@ -31,7 +31,7 @@ const TextEditor = props => {
         })
         .then(res => res.json())
         .then(res => {
-            fetch('http://127.0.0.1:8000/', {
+            fetch('https://polynomialai-backend.herokuapp.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const TextEditor = props => {
     function handleSubmit() {
         console.log("papu", code);
         setLoading(true);
-        fetch('http://127.0.0.1:8000/', {
+        fetch('https://polynomialai-backend.herokuapp.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -93,7 +93,8 @@ const TextEditor = props => {
                         marginTop: '5px',
                         fontFamily: "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
                         fontSize: 14,
-                        height: "400px"
+                        height: "400px",
+                        overflowY: "scroll"
                     }}
                 />
                 <button className="btn btn-primary mt-15" onClick={handleSubmit}>Save and Generate URL</button>
