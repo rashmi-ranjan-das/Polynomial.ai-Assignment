@@ -12,7 +12,7 @@ const TextListing = props => {
 
     React.useEffect(() => {
         setLoading(true);
-        fetch('https://polynomialai-backend.herokuapp.com/', {
+        fetch('http://127.0.0.1:8000/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const TextListing = props => {
 
     function handleRenew(text_id, text_data){
         console.log(text_id)
-        fetch(`https://polynomialai-backend.herokuapp.com/${text_id}/`, {
+        fetch(`http://127.0.0.1:8000/${text_id}/`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const TextListing = props => {
 
     function handleDelete(text_id){
         console.log(text_id)
-        fetch(`https://polynomialai-backend.herokuapp.com/${text_id}/`, {
+        fetch(`http://127.0.0.1:8000/${text_id}/`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ const TextListing = props => {
                             }
                             <td className="text-right">
                                     <Tooltip title="Copy URL" sx={{fontSize: "25px"}}>
-                                        <span><ContentCopyIcon onClick={() => {navigator.clipboard.writeText(`https://polynomial-frontend.netlify.app/#/${text.short_url}/`)}} fontSize="large" color="success" sx={{marginRight: 2, cursor: "pointer"}} /></span>
+                                        <span><ContentCopyIcon onClick={() => {navigator.clipboard.writeText(`http://localhost:3000/#/${text.short_url}/`)}} fontSize="large" color="success" sx={{marginRight: 2, cursor: "pointer"}} /></span>
                                     </Tooltip>
                                     <Tooltip title="Renew Expiry Date" sx={{fontSize: "25px"}}>
                                         <span><AutorenewIcon fontSize="large" color="primary" sx={{marginRight: 2, cursor: "pointer"}} onClick={() => handleRenew(text.id, text.data)} /></span>

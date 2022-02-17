@@ -36,7 +36,7 @@ const TextViewer = props => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://polynomialai-backend.herokuapp.com/${text_url}/`, {
+        fetch(`http://127.0.0.1:8000/${text_url}/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ const TextViewer = props => {
             .then(res => {
                 console.log("qqqq", res)
                 setIp(res.ipString)
-                fetch('https://polynomialai-backend.herokuapp.com/api/ip/', {
+                fetch('http://127.0.0.1:8000/api/ip/', {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const TextViewer = props => {
                 .then(res => res.json())
                 .then(res => {
                     console.log("aaaa", res)
-                    fetch(`https://polynomialai-backend.herokuapp.com/api/ip?text=${text_url}`, {
+                    fetch(`http://127.0.0.1:8000/api/ip?text=${text_url}`, {
                         method: "GET",
                         headers: {
                             'Content-Type': 'application/json',
@@ -187,8 +187,8 @@ const TextViewer = props => {
             </div>
                     <Container>
                         <b>Generated URL</b>
-                        <Pane role="button" onClick={() => {navigator.clipboard.writeText(`https://polynomial-frontend.netlify.app/#/${text_url}/`)}} style={{cursor: "pointer"}}>
-                        <span>{`https://polynomial-frontend.netlify.app/#/${text_url}/`}</span>
+                        <Pane role="button" onClick={() => {navigator.clipboard.writeText(`http://localhost:3000/#/${text_url}/`)}} style={{cursor: "pointer"}}>
+                        <span>{`http://localhost:3000/#/${text_url}/`}</span>
                         <div
                             role="button"
                             onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}

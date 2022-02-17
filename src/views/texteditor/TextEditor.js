@@ -31,7 +31,7 @@ const TextEditor = props => {
         })
         .then(res => res.json())
         .then(res => {
-            fetch('https://polynomialai-backend.herokuapp.com/', {
+            fetch('http://127.0.0.1:8000/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const TextEditor = props => {
     function handleSubmit() {
         console.log("papu", code);
         setLoading(true);
-        fetch('https://polynomialai-backend.herokuapp.com/', {
+        fetch('http://127.0.0.1:8000/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
