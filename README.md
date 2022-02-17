@@ -39,6 +39,8 @@ python manage.py runserver
 ```
 
 ## Deployment Links
+1. Frontend: https://polynomial-frontend.netlify.app/
+2. Backend: https://polynomialai-backend.herokuapp.com/
 
 
 ## Images and Working Video
