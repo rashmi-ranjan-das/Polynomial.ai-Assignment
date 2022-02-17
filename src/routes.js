@@ -2,7 +2,6 @@
 import React from "react";
 import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import App from "./App";
 import Home from "./views/homepage/Home";
 
 
